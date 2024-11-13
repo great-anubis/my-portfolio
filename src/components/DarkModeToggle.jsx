@@ -1,7 +1,10 @@
+// DarkModeToggle.js (No changes here, just ensuring it's wrapped in Router)
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import for navigation
 
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate hook
 
   useEffect(() => {
     // Check the current theme in local storage or default to light
@@ -25,13 +28,28 @@ const DarkModeToggle = () => {
     }
   };
 
+  const handleHomeClick = () => {
+    navigate('/'); // Navigate to the home page
+  };
+
   return (
-    <button
-      onClick={toggleDarkMode}
-      className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full focus:outline-none"
-    >
-      {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-    </button>
+    <div className="flex items-center space-x-4">
+      {/* Home Button */}
+      <button
+        onClick={handleHomeClick}
+        className="p-2 bg-gray-200 dark:bg-gray-700 text-white rounded-full focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
+      >
+        🏠 Home
+      </button>
+
+      {/* Dark Mode Toggle */}
+      <button
+        onClick={toggleDarkMode}
+        className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
+      >
+        {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+      </button>
+    </div>
   );
 };
 

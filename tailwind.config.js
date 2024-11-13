@@ -5,7 +5,10 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '70': '17.5rem', // Define whatever size you need
+      }},
   },
   plugins: [],
 }
