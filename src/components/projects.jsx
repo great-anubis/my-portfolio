@@ -5,6 +5,24 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Import local images
 import driftImage from '../images/driftimage.png';
+import irisImage from '../images/iris.png';
+import hangryImage from '../images/hangry.png';
+import cSharp from '../images/c-sharp.png';
+import git from '../images/git.png';
+import matplotlib from '../images/matplotlib.png';
+import node from '../images/node.png';
+import numpy from '../images/numpy.png';
+import pandas from '../images/pandas.png';
+import Python from '../images/Python.png';
+import react from '../images/react.png';
+import scikit from '../images/scikit.png';
+import tailwind from '../images/tailwind.png';
+import unity from '../images/unity.png';
+import cohere from '../images/cohere.png'
+import rasa from '../images/rasa.png'
+import flask from '../images/flask.png'
+import seaborn from '../images/seaborn.png'
+import memoji from '../images/memoji.png'
 
 // Placeholder URL for external image
 const placeholder = 'https://via.placeholder.com/50';
@@ -46,34 +64,63 @@ function Projects() {
 
     const projects = [
         {
-            title: 'Drift Assistant',
+            title: 'Drift AI Assistant',
             descriptions: [
                 "Designed and developed a chatbot to assist with kitchen tasks using Cohere’s API.",
                 "Integrated Rasa for dialogue management.",
                 "Built the backend using Flask and the frontend with React.",
                 "Currently a work in progress, with plans to include voice functionality, aiming to enhance user experience."
             ],
-            link: '/skills',
             imageUrl: driftImage, 
             techStack: [
-                placeholder, 
-                placeholder,
-                placeholder,
+                git, 
+                rasa,
+                react,
+                flask,
+                cohere,
             ],
         },
         {
-            title: 'Another Project',
+            title: 'This Portfolio',
             descriptions: [
-                "Some description.",
-                "Another feature.",
-                "Details about the project."
+                "Engineered personal portfolio website to showcase development projects and technical skills.",
+                "Demonstrated expertise in web development principles, employing React and Tailwind CSS for responsive, visually appealing interface."
             ],
-            link: '/another',
-            imageUrl: 'https://via.placeholder.com/300', 
+            imageUrl: memoji, 
             techStack: [
-                placeholder, 
-                placeholder,
-                placeholder,
+                react, 
+                git,
+                tailwind,
+                node,
+            ],
+        },
+        {
+            title: 'Blooming Iris Insights',
+            descriptions: [
+                "Developed machine learning model with 90% accuracy for classifying iris species using Python and Scikit-learn",
+                "Utilized Seaborn and Matplotlib for data visualization, enhancing model understanding and performance."
+            ],
+            imageUrl: irisImage, 
+            techStack: [
+                Python, 
+                scikit,
+                matplotlib,
+                pandas,
+                seaborn,
+                numpy,
+            ],
+        },
+        {
+            title: 'Hangry Boids | Self-Sustaining Ecosystem Simulation Game ',
+            descriptions: [
+                "Played pivotal role in 4-member team, enhancing game mechanics and implementing Boid Algorithm for realistic flock behavior, leading to 50% improvement in gameplay complexity and user engagement.",
+                "Created core scripts, establishing foundation for game logic and functionality",
+            ],
+            imageUrl: hangryImage, 
+            techStack: [
+                cSharp, 
+                unity,
+                git,
             ],
         },
     ];
@@ -105,11 +152,6 @@ function Projects() {
                                         </li>
                                     ))}
                                 </ul>
-
-                                {/* Project Link */}
-                                <div className="text-center mb-4">
-                                    <a href={project.link} className="text-blue-500 dark:text-blue-400 underline">View Project</a>
-                                </div>
 
                                 {/* Tech Stack */}
                                 <div className="flex justify-center items-center space-x-4">

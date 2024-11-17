@@ -5,7 +5,7 @@ const About = () => {
         <div className="container mx-auto p-2">
             <div className=" w-[70%] mx-auto h-48 bg-gray-100 dark:bg-gray-900 text-black dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transform hover:scale-105 transition-transform duration-300 flex flex-col justify-center items-center">
                 <h2 className="text-med font-bold ">Who am I ?¿</h2>
-                <p className=" text-center">Hey, I’m Great Osikhueme, a senior studying Computer Science. 
+                <p className=" text-center">How far na, I’m Great, a senior studying Computer Science at Mercy University. 
                     I love diving into new challenges and figuring things out, especially when it comes to tech. 
                     I’ve had the chance to intern at <img src={NASAlogo} alt="NASA Logo" className="inline h-3 w-9" />, 
                     working on some pretty cool stuff like spacecraft communication and RF technology. I’m always coming up with ideas, 

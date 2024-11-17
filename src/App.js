@@ -16,7 +16,7 @@ const App = () => {
         <div className="text-center p-5">
           <img src={Memoji} alt="Great Osikhueme Memoji" className="mx-auto mb-4 w-32 h-32" />
           <h1 className="text-3xl font-bold mb-2">Great Osikhueme</h1>
-          <p className="text-lg">Machine Learning Student</p>
+          <p className="text-lg">Aspiring Maching Learning Enthusaist</p>
         </div>
 
         {/* Dark Mode Toggle */}

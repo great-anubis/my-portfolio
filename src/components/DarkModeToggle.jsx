@@ -37,17 +37,17 @@ const DarkModeToggle = () => {
       {/* Home Button */}
       <button
         onClick={handleHomeClick}
-        className="p-2 bg-gray-200 dark:bg-gray-700 text-white rounded-full focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
+        className="p-2 bg-gray-200 dark:bg-gray-700 text-white rounded-full w-11 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
       >
-        🏠 Home
+        🏠
       </button>
 
       {/* Dark Mode Toggle */}
       <button
         onClick={toggleDarkMode}
-        className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
+        className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full w-11 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
       >
-        {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        {darkMode ? '☀️' : ' 🌙 '}
       </button>
     </div>
   );

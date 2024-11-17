@@ -6,12 +6,12 @@ const Home = () => {
   // Dictionary with info for internal links
   const linksInfo = [
     {
-      title: 'Experience',
+      title: 'Experience 🧑🏾‍💻',
       description: "Where I've gained valuable experience.",
       link: '/experience',
     },
     {
-      title: 'Projects',
+      title: 'Projects 🤖',
       description: "Some projects I've done.",
       link: '/projects',
     }
