@@ -9,7 +9,7 @@ import Resume from './resume.pdf';
 
 const App = () => {
   return (
-    <Router basename="/my-portfolio">
+    <Router basename="/">
       <div className="min-h-screen flex pt-20 flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
         {/* Header Section */}
         <div className="text-center p-5">
