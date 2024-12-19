@@ -14,20 +14,22 @@ const Home = () => {
       title: 'Projects 🤖',
       description: "Some projects I've done.",
       link: '/projects',
-    }
+    },
   ];
 
   return (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen px-6 flex flex-col items-center">
+      {/* About Section */}
       <About />
 
-      <div className="container mx-auto max-w-3xl py-12 flex justify-center space-x-20">
+      {/* Links Section */}
+      <div className="container mx-auto max-w-3xl py-12 grid gap-8 grid-cols-1 sm:grid-cols-2 justify-center items-center">
         {/* Loop over the linksInfo array to create boxes */}
         {linksInfo.length > 0 ? (
           linksInfo.map((item, index) => (
             <Link key={index} to={item.link} aria-label={item.title}>
-              <div className="box w-80 h-40 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-lg p-8 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-800 transform hover:scale-105 transition duration-300 flex flex-col justify-center items-center">
-                <h2 className="text-2xl font-semibold mb-2">{item.title}</h2>
+              <div className="box w-full h-40 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-lg p-8 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-800 transform hover:scale-105 transition duration-300 flex flex-col justify-center items-center">
+                <h2 className="text-2xl font-semibold mb-2 text-center">{item.title}</h2>
                 <p className="text-center text-base">{item.description}</p>
               </div>
             </Link>

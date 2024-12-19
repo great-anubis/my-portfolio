@@ -1,4 +1,3 @@
-// DarkModeToggle.js (No changes here, just ensuring it's wrapped in Router)
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import for navigation
 
@@ -18,7 +17,7 @@ const DarkModeToggle = () => {
   }, []);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prevMode) => !prevMode);
     if (!darkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -33,11 +32,12 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center justify-center space-x-4 sm:space-x-2">
       {/* Home Button */}
       <button
         onClick={handleHomeClick}
-        className="p-2 bg-gray-200 dark:bg-gray-700 text-white rounded-full w-11 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
+        className="p-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-full w-11 sm:w-9 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition-transform duration-300"
+        aria-label="Go to Home"
       >
         🏠
       </button>
@@ -45,9 +45,10 @@ const DarkModeToggle = () => {
       {/* Dark Mode Toggle */}
       <button
         onClick={toggleDarkMode}
-        className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full w-11 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition duration-300"
+        className="p-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-full w-11 sm:w-9 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-800 hover:scale-105 transition-transform duration-300"
+        aria-label="Toggle Dark Mode"
       >
-        {darkMode ? '☀️' : ' 🌙 '}
+        {darkMode ? '☀️' : '🌙'}
       </button>
     </div>
   );
