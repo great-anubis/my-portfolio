@@ -1,37 +1,43 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}", // Ensure Tailwind scans all relevant files
   ],
-  darkMode: 'class', // Enable dark mode based on class
+  darkMode: 'class', // Enable dark mode based on a CSS class
   theme: {
     extend: {
+      // Custom breakpoints
       screens: {
-        xs: '480px', // Extra-small screens
-        sm: '640px', // Small screens
-        md: '768px', // Medium screens
-        lg: '1024px', // Large screens
-        xl: '1280px', // Extra-large screens
-        '2xl': '1536px', // Ultra-large screens
+        xs: '480px',    // Extra-small screens
+        sm: '640px',    // Small screens
+        md: '768px',    // Medium screens
+        lg: '1024px',   // Large screens
+        xl: '1280px',   // Extra-large screens
+        '2xl': '1536px',// Ultra-large screens
       },
+      // Custom widths
       width: {
-        '70': '17.5rem', // Custom width for specific use cases
-        '90': '22.5rem', // Additional custom width
-        'screen-90': '90vw', // 90% of the viewport width
+        '70': '17.5rem',      // 280px
+        '90': '22.5rem',      // 360px
+        'screen-90': '90vw',  // 90% of the viewport width
       },
+      // Custom heights
       height: {
-        'screen-75': '75vh', // 75% of the viewport height
+        'screen-75': '75vh',  // 75% of the viewport height
       },
+      // Custom spacing
       spacing: {
-        '72': '18rem', // Custom spacing
-        '84': '21rem',
-        '96': '24rem',
+        '72': '18rem', // 288px
+        '84': '21rem', // 336px
+        '96': '24rem', // 384px
       },
+      // Custom colors
       colors: {
-        primary: '#1a73e8', // Custom primary color
+        primary: '#1a73e8',   // Custom primary color
         secondary: '#ff7043', // Custom secondary color
-        accent: '#4caf50', // Custom accent color
+        accent: '#4caf50',    // Custom accent color
       },
+      // Custom font sizes with line heights
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.875rem', { lineHeight: '1.25rem' }],
@@ -47,5 +53,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [], // Add any Tailwind plugins here
 };

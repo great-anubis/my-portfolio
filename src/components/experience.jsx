@@ -9,18 +9,16 @@ import techwise from '../images/techwise.png';
 
 function Experience() {
     const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
+        dots: true, // Enable navigation dots
+        infinite: true, // Infinite scrolling
+        speed: 500, // Slide transition speed
+        slidesToShow: 1, // Show one experience at a time
+        slidesToScroll: 1, // Scroll one slide at a time
+        arrows: true, // Show next/prev arrows
         responsive: [
             {
-                breakpoint: 768, // Tablet and smaller screens
+                breakpoint: 768, // For tablets and smaller screens
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
                     arrows: false, // Hide arrows on smaller screens
                 },
             },
@@ -64,7 +62,8 @@ function Experience() {
     return (
         <div className="container mx-auto py-5 px-4 sm:px-2">
             <h2 className="text-3xl sm:text-2xl font-semibold mb-8 text-center text-black dark:text-white">My Experience</h2>
-            <div className="w-full max-w-3xl mx-auto">
+            {/* Carousel Container */}
+            <div className="w-screen-90 sm:w-full max-w-3xl mx-auto">
                 {/* Carousel Slider */}
                 <Slider {...settings}>
                     {experiences.map((experience, index) => (
@@ -77,7 +76,7 @@ function Experience() {
                                 ></div>
 
                                 {/* Experience Title */}
-                                <h3 className="text-2xl sm:text-xl font-bold text-center">{experience.title}</h3>
+                                <h3 className="text-2xl sm:text-xl font-bold text-center mb-2">{experience.title}</h3>
 
                                 {/* Experience Position */}
                                 <h5 className="text-lg sm:text-md font-bold text-center mb-4">{experience.position}</h5>

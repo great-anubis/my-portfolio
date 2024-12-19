@@ -24,7 +24,6 @@ import seaborn from '../images/seaborn.png';
 import memoji from '../images/memoji.png';
 import pandas from '../images/pandas.png'
 
-
 function Projects() {
     const settings = {
         dots: true, // Enable navigation dots
@@ -87,7 +86,9 @@ function Projects() {
     return (
         <div className="container mx-auto py-8 px-4">
             <h2 className="text-3xl font-semibold mb-8 text-center text-black dark:text-white">My Projects</h2>
-            <div className="w-full max-w-4xl mx-auto">
+            
+            {/* Carousel Container */}
+            <div className="w-screen-90 sm:w-full max-w-4xl mx-auto">
                 {/* Carousel Slider */}
                 <Slider {...settings}>
                     {projects.map((project, index) => (
@@ -112,9 +113,9 @@ function Projects() {
                                 </ul>
 
                                 {/* Tech Stack */}
-                                <div className="flex justify-center items-center space-x-4">
+                                <div className="flex justify-center items-center flex-wrap space-x-4">
                                     {project.techStack.map((tech, idx) => (
-                                        <img key={idx} src={tech} alt="Tech" className="h-10 w-10" />
+                                        <img key={idx} src={tech} alt="Tech" className="h-10 w-10 object-contain" />
                                     ))}
                                 </div>
                             </div>
