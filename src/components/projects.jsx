@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 
-// Import local images
 import driftImage from '../images/driftimage.png';
 import irisImage from '../images/iris.png';
 import hangryImage from '../images/hangry.png';
@@ -22,22 +21,23 @@ import rasa from '../images/rasa.png';
 import flask from '../images/flask.png';
 import seaborn from '../images/seaborn.png';
 import memoji from '../images/memoji.png';
-import pandas from '../images/pandas.png'
-
+import pandas from '../images/pandas.png';
 
 function Projects() {
     const settings = {
-        dots: true, // Enable navigation dots
-        infinite: true, // Infinite scrolling
-        speed: 500, // Slide transition speed
-        slidesToShow: 1, // Show one project at a time
-        slidesToScroll: 1, // Scroll one slide at a time
-        arrows: true, // Show next/prev arrows
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
         responsive: [
             {
-                breakpoint: 768, // For tablets and smaller screens
+                breakpoint: 480, // For mobile devices only
                 settings: {
-                    arrows: false, // Hide arrows on smaller screens
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: "10px",
                 },
             },
         ],
@@ -52,7 +52,7 @@ function Projects() {
                 "Built the backend using Flask and the frontend with React.",
                 "Currently a work in progress, with plans to include voice functionality, aiming to enhance user experience.",
             ],
-            imageUrl: driftImage, 
+            imageUrl: driftImage,
             techStack: [git, rasa, react, flask, cohere],
         },
         {
@@ -61,7 +61,7 @@ function Projects() {
                 "Engineered personal portfolio website to showcase development projects and technical skills.",
                 "Demonstrated expertise in web development principles, employing React and Tailwind CSS for responsive, visually appealing interface.",
             ],
-            imageUrl: memoji, 
+            imageUrl: memoji,
             techStack: [react, git, tailwind, node],
         },
         {
@@ -70,7 +70,7 @@ function Projects() {
                 "Developed machine learning model with 90% accuracy for classifying iris species using Python and Scikit-learn.",
                 "Utilized Seaborn and Matplotlib for data visualization, enhancing model understanding and performance.",
             ],
-            imageUrl: irisImage, 
+            imageUrl: irisImage,
             techStack: [Python, scikit, matplotlib, pandas, seaborn, numpy],
         },
         {
@@ -79,42 +79,42 @@ function Projects() {
                 "Played pivotal role in 4-member team, enhancing game mechanics and implementing Boid Algorithm for realistic flock behavior.",
                 "Created core scripts, establishing foundation for game logic and functionality.",
             ],
-            imageUrl: hangryImage, 
+            imageUrl: hangryImage,
             techStack: [cSharp, unity, git],
         },
     ];
 
     return (
         <div className="container mx-auto py-8 px-4">
-            <h2 className="text-3xl font-semibold mb-8 text-center text-black dark:text-white">My Projects</h2>
-            <div className="w-full max-w-4xl mx-auto">
-                {/* Carousel Slider */}
+            <h2 className="text-3xl font-semibold mb-6 text-center text-black dark:text-white">My Projects</h2>
+            <div className="w-full max-w-3xl mx-auto sm:max-w-xs"> {/* Restrict width on mobile */}
                 <Slider {...settings}>
                     {projects.map((project, index) => (
-                        <div key={index} className="p-4">
-                            <div className="box w-full bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
-                                {/* Project Image */}
-                                <div 
-                                    className="h-64 w-full bg-cover bg-center rounded-lg mb-4" 
+                        <div key={index} className="p-6 sm:p-3"> {/* Reduce padding on mobile */}
+                            <div className="box w-full bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg p-6 sm:p-3 rounded-lg">
+                                <div
+                                    className="h-64 sm:h-40 w-full bg-cover bg-center rounded-lg mb-4"
                                     style={{ backgroundImage: `url(${project.imageUrl})` }}
+                                    role="img"
+                                    aria-label={`Image for ${project.title}`}
                                 ></div>
-
-                                {/* Project Title */}
-                                <h3 className="text-2xl font-bold text-center mb-4">{project.title}</h3>
-
-                                {/* Project Descriptions */}
+                                <h3 className="text-2xl sm:text-lg font-bold text-center mb-4">{project.title}</h3>
                                 <ul className="list-disc list-inside mb-4">
                                     {project.descriptions.map((desc, idx) => (
-                                        <li key={idx} className="text-gray-700 dark:text-gray-300 text-sm">
+                                        <li key={idx} className="text-gray-700 dark:text-gray-300 text-sm sm:text-xs">
                                             {desc}
                                         </li>
                                     ))}
                                 </ul>
-
-                                {/* Tech Stack */}
-                                <div className="flex justify-center items-center space-x-4">
+                                <div className="flex justify-center items-center flex-wrap space-x-2">
                                     {project.techStack.map((tech, idx) => (
-                                        <img key={idx} src={tech} alt="Tech" className="h-10 w-10" />
+                                        <img
+                                            key={idx}
+                                            src={tech}
+                                            alt={`${tech} icon`}
+                                            className="h-6 w-6 sm:h-5 sm:w-5"
+                                            loading="lazy"
+                                        />
                                     ))}
                                 </div>
                             </div>

@@ -17,11 +17,11 @@ function Experience() {
         arrows: true,
         responsive: [
             {
-                breakpoint: 768, // Tablet and smaller screens
+                breakpoint: 480, // For mobile devices only
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false, // Hide arrows on smaller screens
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: "10px",
                 },
             },
         ],
@@ -62,30 +62,22 @@ function Experience() {
     ];
 
     return (
-        <div className="container mx-auto py-5 px-4 sm:px-2">
-            <h2 className="text-3xl sm:text-2xl font-semibold mb-8 text-center text-black dark:text-white">My Experience</h2>
-            <div className="w-full max-w-3xl mx-auto">
-                {/* Carousel Slider */}
+        <div className="container mx-auto py-5 px-4">
+            <h2 className="text-3xl font-semibold mb-8 text-center text-black dark:text-white">My Experience</h2>
+            <div className="w-full max-w-3xl mx-auto sm:max-w-xs"> {/* Restrict width on mobile */}
                 <Slider {...settings}>
                     {experiences.map((experience, index) => (
-                        <div key={index} className="p-6">
-                            <div className="box w-full bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
-                                {/* Experience Image */}
+                        <div key={index} className="p-6 sm:p-3"> {/* Reduce padding on mobile */}
+                            <div className="box w-full bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg p-6 sm:p-3 rounded-lg">
                                 <div
-                                    className="h-64 sm:h-48 w-full bg-cover bg-center rounded-lg mb-4"
+                                    className="h-64 sm:h-40 w-full bg-cover bg-center rounded-lg mb-4" 
                                     style={{ backgroundImage: `url(${experience.imageUrl})` }}
                                 ></div>
-
-                                {/* Experience Title */}
-                                <h3 className="text-2xl sm:text-xl font-bold text-center">{experience.title}</h3>
-
-                                {/* Experience Position */}
+                                <h3 className="text-2xl sm:text-lg font-bold text-center">{experience.title}</h3>
                                 <h5 className="text-lg sm:text-md font-bold text-center mb-4">{experience.position}</h5>
-
-                                {/* Experience Descriptions as Bullet Points */}
-                                <ul className="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300">
+                                <ul className="list-disc list-inside mb-4">
                                     {experience.descriptions.map((desc, idx) => (
-                                        <li key={idx} className="text-sm sm:text-xs leading-relaxed">
+                                        <li key={idx} className="text-sm sm:text-xs text-gray-700 dark:text-gray-300">
                                             {desc}
                                         </li>
                                     ))}
