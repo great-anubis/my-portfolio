@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 
 import nasa from '../images/nasa.webp';
-import mercy from '../images/mercy.jpg';
-import techwise from '../images/techwise.png';
+import mercy from '../images/mercy.png';
+import techwise from '../images/techwise.jpg';
 
 function Experience() {
     const settings = {
