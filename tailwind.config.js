@@ -33,7 +33,7 @@ module.exports = {
       },
       // Custom colors
       colors: {
-        primary: '#1a73e8',   // Custom primary color
+        primary: '#e81a35',   // Custom primary color
         secondary: '#ff7043', // Custom secondary color
         accent: '#4caf50',    // Custom accent color
       },

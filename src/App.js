@@ -10,7 +10,7 @@ import Resume from './resume.pdf';
 const App = () => {
   return (
     <Router basename="/">
-      <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 text-black dark:text-white px-4">
+      <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 dark:bg-gray-900 text-black dark:text-white px-4">
         {/* Header Section */}
         <header className="text-center p-5 w-full max-w-md sm:max-w-lg md:max-w-2xl">
           <img
@@ -30,13 +30,13 @@ const App = () => {
         {/* Contact Section */}
         <div className="text-center p-2 space-y-2 sm:space-y-0 sm:space-x-4 mt-4 flex flex-col sm:flex-row justify-center items-center">
           <a
-            className="text-md sm:text-med underline hover:no-underline px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
+            className="text-md sm:text-med px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
             href="mailto:greatosik@gmail.com"
           >
             Email Me →
           </a>
           <a
-            className="text-md sm:text-med underline hover:no-underline px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
+            className="text-md sm:text-med px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
             href={Resume}
             target="_blank"
             rel="noopener noreferrer"
@@ -44,7 +44,7 @@ const App = () => {
             My Resume →
           </a>
           <a
-            className="text-md sm:text-med underline hover:no-underline px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
+            className="text-md sm:text-med px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
             href="https://www.linkedin.com/in/great-osikhueme"
             target="_blank"
             rel="noopener noreferrer"
@@ -52,7 +52,7 @@ const App = () => {
             My LinkedIn →
           </a>
           <a
-            className="text-md sm:text-med underline hover:no-underline px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
+            className="text-md sm:text-med px-3 py-2 rounded-md bg-primary dark:bg-secondary text-white dark:text-black transition-transform transform hover:scale-105"
             href="https://github.com/great-anubis"
             target="_blank"
             rel="noopener noreferrer"
